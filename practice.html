@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>練習</title>
+  </head>
+  <body>
+    <!--外部からjsファイルを読み込む-->
+    <script src="js/script.js"></script>
+    <script>
+    /* ブラウザのコンソールにhello worldを表示させる */
+    var msg;  //変数宣言
+    msg = "Hello world hogehoge"
+      console.log("hello world");
+      console.log(msg);
+
+      //演算子を使ってみる
+      var x;
+      x = 10 * 2; //20
+      var y;
+      y = 10 % 3; //1
+      console.log(x); //xの値をブラウザのコンソールへ表示
+      y += 5; //6 1を足す
+      y ++;  //7 1を足す
+      console.log(y); //yの値をブラウザのコンソールへ表示
+
+      //文字列を表現してみる
+      var str;
+      // \nは改行、\tはタブの役割
+      str = 'it\'s a pen.';
+      console.log(str);
+
+      //条件分岐の構文を書いてみる
+      /*
+      if(条件){
+      真の時
+      }else{
+      偽の時
+      }
+      */
+      var score = 80;
+      if (score > 60) {
+        console.log('OK!');
+      }else if (score > 40) {
+        console.log('soso...');
+      }else {
+        console.log('NG!');
+      }
+
+      //真偽値
+      /*if (x) {
+        //xが空文字ではなかったらの処理
+      }*/
+
+      //switchの条件分岐を書いてみる
+      var signal = 'red';
+      switch (signal) { //signalの値が空ではないとき
+        case 'red': //値がredのとき
+          console.log('stop!');
+          break;  //breakは必ずつける
+          //case文は続けて書くことができる↓
+        case 'green':
+        case 'blue':
+          console.log('go!');
+          break;
+        case 'yellow':
+        console.log('show down!');
+          break;
+        default:
+      }
+
+      //whileでループ処理を書いてみる
+      var i = 0;
+    /*  while (i < 10) {
+        console.log(i);
+        i++;  //1ずつ足す。9になるまで足し続ける
+      }*/
+
+      //後で判定する書き方
+      do {
+        console.log(i);
+        i++;
+      } while (i < 10);
+    </script>
+  </body>
+</html>
