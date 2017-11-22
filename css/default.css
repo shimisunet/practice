@@ -1,0 +1,39 @@
+/*
+  em -親要素の文字サイズを基準にする
+  rem -ルートに対する
+*/
+
+html{
+  font-size: 20px;
+}
+h1{
+  font-size: 2em;
+  /*htmlを基準とした2倍の文字サイズの40pxを表示*/
+}
+p{
+  font-size: 0.8rem;
+  /*htmlを基準とした0.8倍のサイズを表示16pxを表示*/
+}
+div{
+  width:200px;
+  height:200px;
+}
+.box1{
+  background: rgb(255, 100, 100);
+}
+div:not(.box1)
+.box2{
+  background: rgba(255, 100, 100, 0.2);
+}
+div:empty
+.box3{
+  background: hsla(210, 100%, 50%, 0.7);
+}
+.box4{
+  background: hsla(210, 100%, 30%, 0.7);
+}
+
+/*属性セレクタ*/
+/*a[href^='http']{color:orange;}*/
+/*a[href$='com']{color: pink;}*/
+a[href*='co.jp']{color:red;}
