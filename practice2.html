@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>練習</title>
+  </head>
+  <body>
+    <!--外部からjsファイルを読み込む-->
+    <script>
+    //alert,confirm,pronptを使ってみる
+
+    //alert
+    //alert('Hello, world!');
+
+    /* confirm OK/キャンセルの表示を出す。
+    OKのときtrueを返して、キャンセルのときfalseを返す
+    */
+    //var answer = confirm('本当にいいですか？');
+    //console.log(answer);
+    /*
+    if (confirm('本当に消していいの？')) {
+      console.log('消しました');
+    }else {
+      console.log('まだ残ってるよ');
+    }
+    */
+
+    /* pronpt
+    入力ダイアログを表示
+    prompt('テキスト', 'デフォルト値')←第二引数を渡すことが可能s
+    */
+    var name = prompt('お名前は？', '名前を入力');
+    console.log(name);
+    </script>
+  </body>
+</html>

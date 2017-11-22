@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>DOMの練習</title>
+  </head>
+  <body>
+    <h1>見出し1</h1>
+    <p id="msg">こんにちは</p>
+    <button id="add" name="button">button</button>
+    <script>
+    var e = document.getElementById('msg');
+    e.textContent = 'Hello!'; //テキストの書き換え
+    e.style.color = 'red';  //色の指定
+    e.className = 'myStyle';
+
+    //新たにテキストを追加してみる
+    var greet = document.createElement('p'),
+        text = document.createTextNode('Hello, world');
+        document.body.appendChild(greet).appendChild(text);
+
+    //ボタンにイベントを設定してみる
+    document.getElementById('add').addEventListener('click', function(){
+      var greet = document.createElement('p'),
+      text = document.createTextNode('Hello, world');
+      document.body.appendChild(greet).appendChild(text);
+    });
+    </script>
+  </body>
+</html>

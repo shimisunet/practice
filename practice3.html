@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>練習</title>
+  </head>
+  <body>
+    <script>
+    /*
+    関数を作ってみる
+    function 関数名(引数){
+      処理
+      return 返り値
+  }
+
+  ローカル変数とは？関数内で宣言された変数で、
+  その関数の中だけしか使えない。
+    */
+    var hello = function hello(name){
+      var msg = 'Hello, ' + name;
+      return msg;
+      //return 'Hello, ' + name; //返り値
+    };
+    var greet = hello('Tom'); //関数helloの実行
+    console.log(greet); //結果の出力
+
+    /*
+    即時関数を使ってみる
+    (function 関数名(引数){
+    処理
+  })(引数);
+    */
+    (function hello(names){
+      console.log('hello' + names);
+    })('Tom');
+
+    (function(){
+      var x = 10;
+          y = 20;
+          console.log(x + y);
+    })();
+    </script>
+  </body>
+</html>
