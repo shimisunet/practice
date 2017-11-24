@@ -1,0 +1,109 @@
+/*
+  em -親要素の文字サイズを基準にする
+  rem -ルートに対する
+*/
+
+html{
+  font-size: 20px;
+}
+h1{
+  font-size: 2em;
+  /*htmlを基準とした2倍の文字サイズの40pxを表示*/
+}
+p{
+  font-size: 0.8rem;
+  /*htmlを基準とした0.8倍のサイズを表示16pxを表示*/
+}
+div{
+  width:200px;
+  height:200px;
+}
+.box1{
+  background: rgb(255, 100, 100);
+}
+div:not(.box1)
+.box2{
+  background: rgba(255, 100, 100, 0.2);
+}
+div:empty
+.box3{
+  background: hsla(210, 100%, 50%, 0.7);
+}
+.box4{
+  background: hsla(210, 100%, 30%, 0.7);
+}
+
+/*属性セレクタ*/
+/*a[href^='http']{color:orange;}*/
+/*a[href$='com']{color: pink;}*/
+a[href*='co.jp']{color:red;}
+
+/*グラデーションのcss*/
+.gra1{
+  background-image: linear-gradient(skyblue, blue);
+}
+.gra2{
+  background-image: linear-gradient(to top left, skyblue, blue);
+}
+.gra3{
+  background-image: linear-gradient(45deg, skyblue, blue);
+}
+.gra4{
+  background-image: linear-gradient(lightgreen 10%, skyblue 70%, blue);
+}
+
+/*円形グラデーションのcss*/
+.gra5{
+background-image: radial-gradient(skyblue, blue);
+}
+.gra6{
+background-image: radial-gradient(at 30px 40px, skyblue, blue);
+}
+.gra7{
+background-image: radial-gradient(20px at 30px 40px, skyblue, blue);
+}
+.gra8{
+background-image: radial-gradient(farthest-side at 30px 40px, skyblue, blue);
+}
+
+/*要素を変形させるcss*/
+.box5{
+  background: orange;
+  opacity: .5;
+  transform: translate(20px, 50px);
+}
+.box6{
+  background: blue;
+  opacity: .5;
+}
+
+/*transitionのcss*/
+.box7{
+  background: skyblue;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  transition-delay: 0.8s;
+}
+.box7:hover{
+  opacity: 0.3;
+}
+
+/*box-sizingのcss*/
+.container{
+  width: 400px;
+  height: 100px;
+  background: blue;
+}
+.box_list{
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  background: #eee;
+  float: left;
+  padding: 10px;
+  border-bottom: 10px solid #ccc;
+}
+.box_list + .box_list{
+  margin-left: 10px;
+}
